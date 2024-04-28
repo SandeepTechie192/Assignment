@@ -1,0 +1,143 @@
+/* Make variables for color theme, font, and other style variables */
+
+:root{
+    --bg-color: #f5f5f5;
+    --primary-color: #27ae60;
+    --secondary-color: #2c3e50;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --font-size: 3rem;
+
+    --font: 'Arial', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.carousel{
+    width: 100%;
+    height: 100vh;
+    margin-top: -8vh;
+}
+
+
+
+.colorWhite{
+    color: var(--white-color) !important;
+}
+
+.active{
+    color: var(--black-color) !important;
+}
+
+/* overlay effect */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:   rgba(0, 0, 0, 0.8) !important;
+    z-index: 1;
+}
+
+.carouselText{
+    color: var(--white-color);
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    font-size: 10rem;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 2;
+    text-align: left;
+}
+
+h1{
+    font-size: var(--font-size) !important;
+    font-family: var(--font);
+}
+
+.portfolio{
+    padding: 1rem 0;
+
+}
+
+.heading{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+    text-decoration: underline;
+
+}
+
+@media screen and (max-width: 768px){
+    /* remove sticky from navigation */
+    .navigation{
+        position: auto;
+    }
+    .carousel{
+        margin-top: 0;
+        margin-bottom: 0;
+        height:100%;
+    }
+    .carouselText{
+        width: 80%;
+        font-size: 5px !important;
+        left: 10%;
+    }
+
+    h1{
+        font-size: 1.5rem !important;
+    }
+
+    .heading{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    .portfolio{
+        padding: 0.3rem 0;
+    }
+    .colorWhite{
+        color: var(--black-color) !important;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .carouselText{
+        width: 90%;
+        font-size: 3px !important;
+        left: 5%;
+    }
+    h1{
+        font-size: 1rem !important;
+    }
+    .heading{
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+    .portfolio{
+        padding: 0.2rem 0;
+    }
+}
+
+@media screen and (min-width: 960px){
+    .navigation{
+        color: var(--white-color);
+        z-index: 100;
+        position: sticky !important;
+        top: 0 !important;
+    }
+}
+
